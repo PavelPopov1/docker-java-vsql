@@ -30,6 +30,7 @@ RUN set -ex \
 	&& ls /root/folder \
 	&& rm -rf /root/folder/* \
 	&& useradd -d /home/airflow -p $(openssl passwd -1 brAdebr7) airflow \
+	&& chown -R airflow /home/airflow \
 	&& mkdir -p /home/airflow/.ssh \
 	&& echo "airflow ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers
 
