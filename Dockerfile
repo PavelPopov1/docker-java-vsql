@@ -15,6 +15,7 @@ RUN set -ex \
     ' \
 	&& apt-get update \
 	&& apt-get -y install alien \
+	&& apt-get -y install sudo \
 	&& apt-get update \
 	&& alien -i /root/folder/vertica-client-9.3.1-0.x86_64.rpm \
 	&& echo "export PATH=$PATH:/opt/vertica/bin" >> ~/.bashrc \
