@@ -18,6 +18,7 @@ RUN set -ex \
 	&& apt-get -y install sudo \
 	&& apt-get update \
 	&& alien -i /root/folder/vertica-client-9.3.1-0.x86_64.rpm \
+	&& alien -i /root/folder/oracle-instantclient11.2-basic-11.2.0.4.0-1.x86_64.rpm \
 	&& echo "export PATH=$PATH:/opt/vertica/bin" >> ~/.bashrc \
 	&& apt-get -y install ssh \
 	&& service ssh start \
