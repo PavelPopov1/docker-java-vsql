@@ -25,6 +25,7 @@ RUN set -ex \
 	&& apt-get -y upgrade \
 	&& apt-get clean \
 	&& mkdir -p /home/airflow/Java/lib \
+	&& echo "export PATH=$PATH:/opt/vertica/bin" >> /home/airflow/.bashrc \
 	&& cp -R /root/folder/lib /home/airflow/Java/ \
 	&& ls /root/folder \
 	&& rm -rf /root/folder/* \
