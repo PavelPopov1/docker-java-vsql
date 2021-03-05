@@ -1,4 +1,4 @@
-FROM openjdk:7
+FROM openjdk:8
 COPY . /usr/src/myapp
 WORKDIR /home/airflow
 COPY resources /root/folder
